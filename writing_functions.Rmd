@@ -84,7 +84,6 @@ mean_and_sd = function(x) {
   mean_x = mean(x)
   sd_x = sd(x)
   
-  
 tibble(
   mean = mean_x,
   sd = sd_x
