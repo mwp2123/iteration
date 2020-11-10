@@ -23,12 +23,14 @@ options(
 
 scale_colour_discrete = scale_color_viridis_d
 scale_fill_discrete=scale_fill_viridis_d
+
+set.seed(1)
 ```
 
 ## Let's simulate something
 
 ```{r}
-sim_mean_sd = function(n, mu = 3, sigma = .7) {
+sim_mean_sd = function(n, mu = 3, sigma = 4) {
   
   sim_data = tibble(
     x = rnorm(n, mean = mu, sd = sigma),
@@ -106,7 +108,7 @@ for( i in 1:4) {
 }
 ```
 
-```{r}
+```{r, cache = TRUE}
 sim_results = 
 tibble(
   sample_size = c(30,60,120,240)
